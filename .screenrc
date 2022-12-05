@@ -1,0 +1,16 @@
+altscreen on
+vbell off
+autodetach on
+startup_message off
+
+
+hardstatus alwayslastline
+#hardstatus string '%{gk}%{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %d/%m/%Y %c:%s ]%{W}'
+hardstatus string '%{gk}%{G}%H%{g}|%{Y}%l%{g}|%L=%= %{wk}%?%-w%?%45L>%{=b kR}%n*%f %t%?(%u)%?%{= kw}%?%+w%?%=%-21= %{g}|%{=b C}%Y-%m-%d %c:%s%{W}'
+
+screen -t htop
+stuff "htop\015"
+screen -t mc
+stuff "mc\015"
+screen -t disks
+stuff "df -h\015"
